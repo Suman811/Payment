@@ -5,17 +5,21 @@ import { UserRoutingModule } from './user-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MethodComponent } from './method/method.component';
 import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SummaryComponent } from './summary/summary.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    MethodComponent
+    MethodComponent,
+    SummaryComponent
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ]
 })
 export class UserModule { }

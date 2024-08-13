@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,13 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  selectedplan: string = '';
-  constructor(private route:Router){
+  
+  constructor(private router: Router) {}
 
+  subscribe(planType: string): void {
+    // Navigate to the summary page with the selected plan as a query parameter
+    this.router.navigate(['user/summary'], { queryParams: { plan: planType } });
   }
-subscribe(){
-  console.log("hloo");
-  this.route.navigate(['user/method']);
-  //this.route.navigate(['user/method'], { queryParams: { plan: this.selectedplan } });
-}
 }
