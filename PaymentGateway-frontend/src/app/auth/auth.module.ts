@@ -6,7 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
     AuthRoutingModule,
     ReactiveFormsModule,
     ToastrModule,
+    HttpClientModule
   ]
 })
 export class AuthModule { }
